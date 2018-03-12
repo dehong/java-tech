@@ -1,4 +1,5 @@
-package com.dehong.redis.jredis;
+package com.dehong.redis.jedis;
+
 
 /** 
  * 
