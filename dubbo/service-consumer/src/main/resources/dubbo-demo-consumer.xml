@@ -21,7 +21,7 @@
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 指定生成者 -->
-    <dubbo:application name="my_provider" />
+    <dubbo:application name="my_consumer" />
 
     <!-- 使用multicast广播注册中心暴露服务地址 -->
     <dubbo:registry address="zookeeper://192.168.43.84:2181" />
