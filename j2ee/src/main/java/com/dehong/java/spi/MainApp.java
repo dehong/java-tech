@@ -11,12 +11,9 @@ public class MainApp
     private static void demo1()
     {
         ServiceLoader<IService> serviceLoader = ServiceLoader.load(IService.class);
-        Iterator<IService> iterator = serviceLoader.iterator();
-
-        if (iterator.hasNext())
+        for (IService service : serviceLoader)
         {
-            IService next = iterator.next();
-            String res = next.hello("zhangsan");
+            String res = service.hello("zhangsan");
             System.out.println(res);
         }
     }
@@ -36,8 +33,9 @@ public class MainApp
 
 
         /*输出：
-        ServiceA : hello zhangsan
-        ServiceB : hello world
+            ServiceA : hello zhangsan
+            ServiceB : hello zhangsan
+            ServiceB : hello world
         */
     }
 }
