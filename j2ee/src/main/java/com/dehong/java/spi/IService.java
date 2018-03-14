@@ -5,5 +5,9 @@ package com.dehong.java.spi;
  */
 public interface IService
 {
-   public String hello(String name);
+
+    public String hello(String name);
+
+    public IService getService(String name);
+
 }

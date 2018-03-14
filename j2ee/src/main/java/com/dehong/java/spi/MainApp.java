@@ -1,6 +1,5 @@
 package com.dehong.java.spi;
 
-import java.util.Iterator;
 import java.util.ServiceLoader;
 
 /**
@@ -25,17 +24,25 @@ public class MainApp
         System.out.println(res);
     }
 
+    private static void demo3()
+    {
+        IService serviceB = ServiceFactory.getService(ServiceB.class);
+        String res = serviceB.hello("serviceB");
+        System.out.println(res);
+    }
 
     public static void main(String[] args)
     {
         demo1();
         demo2(); //设置jvm options: -Dcom.dehong.java.spi.IService=com.dehong.java.spi.ServiceB
+        demo3();
 
 
         /*输出：
             ServiceA : hello zhangsan
             ServiceB : hello zhangsan
             ServiceB : hello world
+            ServiceB : hello serviceB
         */
     }
 }
